@@ -1,0 +1,28 @@
+spring:
+  batch:
+    job:
+      enabled: true
+
+token:
+  symbols:
+    - "BTC"
+    - "DOGE"
+    - "ETH"
+    - "LTC"
+    - "XRP"
+  resources:
+    - "src/main/resources/prices/BTC_values.csv"
+    - "src/main/resources/prices/DOGE_values.csv"
+    - "src/main/resources/prices/ETH_values.csv"
+    - "src/main/resources/prices/LTC_values.csv"
+    - "src/main/resources/prices/XRP_values.csv"
+  headers:
+    - "timestamp"
+    - "symbol"
+    - "price"
+
+api:
+  blacklisted-ips:
+    - 192.158.1.38
+    - 192.158.1.39
+    - 192.158.1.40

@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "afb09919-876d-43b0-a038-457896be2279",
+		"name": "crypto-recommendation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9528780"
+	},
+	"item": [
+		{
+			"name": "DescendingSortedListOfAllTheTokensComparingTheNormalizedRange - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens?start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DescendingSortedListOfAllTheTokensComparingTheNormalizedRange - MISSING_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens?start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DescendingSortedListOfAllTheTokensComparingTheNormalizedRange - INVALID_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.39",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens?start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DescendingSortedListOfAllTheTokensComparingTheNormalizedRange - MISSING_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens?end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DescendingSortedListOfAllTheTokensComparingTheNormalizedRange - INVALID_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens?start_timestamp=900000000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "900000000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1641045600000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641045600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - MISSING_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1641045600000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641045600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - INVALID_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.39",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1641045600000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641045600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - MISSING_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - IVALID_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=900000000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "900000000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - CONSTRAINT_VIOLATION - SYMBOL_NOT_SUPPORTED",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/EGLD?start_timestamp=1641045600000&end_timestamp=1641553200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"EGLD"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641045600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641553200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - CONSTRAINT_VIOLATION - END_TIMESTAMP_LOWER_THAN_START_TIMESTAMP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1641553200000&end_timestamp=1641045600000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641553200000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641045600000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - NOT_FOUND - DATA_POINT_OLDER_THAN_START_TIMESTAMP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1643659300000&end_timestamp=1643659400000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1643659300000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659400000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IntervalTokenData - NOT_FOUND - DATA_POINT_NEWER_THAN_END_TIMESTAMP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/BTC?start_timestamp=1641009400000&end_timestamp=1641009500000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"BTC"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641009400000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641009500000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - MISSING_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-Fo",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - INVALID_REQUEST_HEADER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.39",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue - MISSING_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue - INVALID_REQUEST_PARAM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=random&start_timestamp=1641009600000&end_timestamp=1643659200000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "random"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641009600000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659200000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - CONSTRAINT_VIOLATION - END_TIMESTAMP_LOWER_THAN_START_TIMESTAMP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1641553200000&end_timestamp=1641045600000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641553200000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641045600000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - NOT_FOUND - DATA_POINT_OLDER_THAN_START_TIMESTAMP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1643659300000&end_timestamp=1643659400000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1643659300000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1643659400000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenWithTheGreatestValue  - NOT_FOUND - DATA_POINT_NEWER_THAN_END_TIMESTAMP Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Forwarded-For",
+						"value": "192.158.1.41",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tokens/greatest-value?metric=normalized-range&start_timestamp=1641009400000&end_timestamp=1641009500000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tokens",
+						"greatest-value"
+					],
+					"query": [
+						{
+							"key": "metric",
+							"value": "normalized-range"
+						},
+						{
+							"key": "start_timestamp",
+							"value": "1641009400000"
+						},
+						{
+							"key": "end_timestamp",
+							"value": "1641009500000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
